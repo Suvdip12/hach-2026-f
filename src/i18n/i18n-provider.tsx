@@ -17,7 +17,7 @@ import {
   Dictionary,
 } from "./dictionaries";
 
-const LANGUAGE_STORAGE_KEY = "curiotech-language";
+const LANGUAGE_STORAGE_KEY = "easycode-language";
 
 interface I18nContextType {
   locale: Locale;

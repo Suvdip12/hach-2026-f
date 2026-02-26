@@ -38,25 +38,25 @@ export const authRoutes = [
 export const curioRoutes = [
   {
     path: "/curiocode",
-    label: "CurioCode",
+    label: "EasyCode",
     icon: <Code size={20} />,
     description: "Coding & Programming",
   },
   {
     path: "/curioai",
-    label: "CurioAI",
+    label: "EasyAI",
     icon: <BrainCircuit size={20} />,
     description: "Artificial Intelligence",
   },
   {
     path: "/curiobot",
-    label: "CurioBot",
+    label: "EasyBot",
     icon: <Bot size={20} />,
     description: "Robotics",
   },
   {
     path: "/curiothink",
-    label: "CurioThink",
+    label: "EasyThink",
     icon: <Lightbulb size={20} />,
     description: "Critical Thinking",
   },

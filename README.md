@@ -1,4 +1,4 @@
-# CurioTech Frontend
+# EasyCode Frontend
 
 > A modern, interactive learning platform for kids built with Next.js 16, React 19, and TypeScript. Features include coding playgrounds, video lectures, assessments, and comprehensive course management.
 
@@ -18,7 +18,7 @@
 
 ## 🎯 Overview
 
-CurioTech Frontend is a comprehensive learning management system designed specifically for children. It provides an engaging, interactive platform for coding education, video-based learning, assessments, and progress tracking. The application supports multi-tenancy with school-specific branding and content.
+EasyCode Frontend is a comprehensive learning management system designed specifically for children. It provides an engaging, interactive platform for coding education, video-based learning, assessments, and progress tracking. The application supports multi-tenancy with school-specific branding and content.
 
 ## ✨ Features
 
@@ -87,14 +87,14 @@ CurioTech Frontend is a comprehensive learning management system designed specif
 ### Prerequisites
 - Node.js >= 20.x
 - pnpm (recommended) or npm
-- Backend API running (see [curiotech-backend](../curiotech-backend))
+- Backend API running (see [easycode-backend](../easycode-backend))
 
 ### Installation
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/careercafe-in/curiotech-frontend.git
-cd curiotech-frontend
+git clone https://github.com/careercafe-in/easycode-frontend.git
+cd easycode-frontend
 ```
 
 2. **Install dependencies**
@@ -128,7 +128,7 @@ pnpm start
 ## 📁 Project Structure
 
 ```
-curiotech-frontend/
+easycode-frontend/
 ├── public/                 # Static assets
 │   ├── turtle.js          # Turtle graphics library
 │   ├── about/             # About page images
@@ -191,7 +191,7 @@ BETTER_AUTH_SECRET=your-secret-key
 BETTER_AUTH_URL=http://localhost:3000
 
 # School Domain (for multi-tenancy)
-NEXT_PUBLIC_SCHOOL_DOMAIN=default.curiotech.com
+NEXT_PUBLIC_SCHOOL_DOMAIN=default.easycode.com
 
 # Analytics (Production)
 NEXT_PUBLIC_VERCEL_ANALYTICS_ID=your-analytics-id
@@ -591,7 +591,7 @@ Private - Copyright (c) 2025 Career Cafe
 For issues or questions:
 - **Documentation**: See [API_GUIDE.md](./API_GUIDE.md)
 - **Issues**: Create an issue on GitHub
-- **Backend**: [curiotech-backend](../curiotech-backend)
+- **Backend**: [easycode-backend](../easycode-backend)
 
 ## 🗺️ Roadmap
 

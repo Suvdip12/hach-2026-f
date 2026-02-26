@@ -82,11 +82,7 @@
 
 /* Dark mode */
 :is(.dark, .dark-theme) .individual-login-container {
-  background: linear-gradient(
-    135deg,
-    var(--orange-1) 0%,
-    var(--orange-2) 100%
-  );
+  background: linear-gradient(135deg, var(--orange-1) 0%, var(--orange-2) 100%);
 }
 
 :is(.dark, .dark-theme) .individual-login-card {

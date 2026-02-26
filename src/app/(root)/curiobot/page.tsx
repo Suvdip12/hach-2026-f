@@ -4,7 +4,7 @@ import "./curiobot.css";
 import Navbar from "@/component/organisms/Navbar";
 import { useTranslation } from "@/i18n";
 
-export default function CurioBotPage() {
+export default function EasyBotPage() {
   const { t } = useTranslation();
 
   return (

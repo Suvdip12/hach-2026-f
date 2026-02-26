@@ -330,7 +330,7 @@ export default function ContactPage() {
                 🛠️ {t("contact.getSupport")}
               </button>
               <button className="hero-btn call-btn">
-                📞 {t("contact.callUs")}: 1-800-CURIOTECH
+                📞 {t("contact.callUs")}: 1-800-EASYCODE
               </button>
             </div>
             <div className="hero-chat">
@@ -1098,7 +1098,7 @@ export default function ContactPage() {
             <div className="contact-info-group">
               <h4>Main Phone:</h4>
               <a href="tel:1-800-287-4683" className="contact-link">
-                1-800-CURIOTECH (1-800-287-4683)
+                1-800-EASYCODE (1-800-287-4683)
               </a>
             </div>
 
@@ -1111,29 +1111,29 @@ export default function ContactPage() {
 
             <div className="contact-info-group">
               <h4>General:</h4>
-              <a href="mailto:hello@curiotech.com" className="contact-link">
-                hello@curiotech.com
+              <a href="mailto:hello@easycode.com" className="contact-link">
+                hello@easycode.com
               </a>
             </div>
 
             <div className="contact-info-group">
               <h4>Sales:</h4>
-              <a href="mailto:sales@curiotech.com" className="contact-link">
-                sales@curiotech.com
+              <a href="mailto:sales@easycode.com" className="contact-link">
+                sales@easycode.com
               </a>
             </div>
 
             <div className="contact-info-group">
               <h4>{t("contact.support")}:</h4>
-              <a href="mailto:support@curiotech.com" className="contact-link">
-                support@curiotech.com
+              <a href="mailto:support@easycode.com" className="contact-link">
+                support@easycode.com
               </a>
             </div>
 
             <div className="contact-info-group">
               <h4>Address:</h4>
               <div className="address">
-                <p>CurioTech Educational Solutions</p>
+                <p>EasyCode Educational Solutions</p>
                 <p>123 Innovation Drive, Suite 200</p>
                 <p>Tech Valley, NY 12345</p>
                 <p>United States</p>
@@ -1170,10 +1170,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Why Choose CurioTech Section */}
+            {/* Why Choose EasyCode Section */}
             <div className="why-choose-section">
               <h3 className="contact-info-title">
-                {t("contact.whyChooseCurioTech")}
+                {t("contact.whyChooseEasyCode")}
               </h3>
 
               <div className="feature-item">

@@ -1,9 +1,8 @@
 export const IMAGES = {
   hero: "https://res.cloudinary.com/dvhjyombi/image/upload/v1770747476/image-upload-app/di8wzjcw2aeiijwmtqdc.webp",
   logo: {
-    icon: "https://res.cloudinary.com/dvhjyombi/image/upload/v1770839910/image-upload-app/dfyerupsgarymobm4die.webp",
-    icon1:
-      "https://res.cloudinary.com/dvhjyombi/image/upload/v1770839911/image-upload-app/slusonik1jufpjcvpmga.webp",
+    icon: "/easycode_logo.png",
+    icon1: "/easycode_logo.png",
   },
   brands: {
     dpiit:
@@ -17,7 +16,7 @@ export const IMAGES = {
     mca: "https://res.cloudinary.com/dvhjyombi/image/upload/v1770835351/image-upload-app/o2dyjmkzgsmodwqhxukh.webp",
   },
   about: {
-    curiotech:
+    easycode:
       "https://res.cloudinary.com/dvhjyombi/image/upload/v1770835333/image-upload-app/hs9yo1saulvryswyr5yq.webp",
     founder:
       "https://res.cloudinary.com/dvhjyombi/image/upload/v1770835369/image-upload-app/zxi6nh0ttc4wxb9ds2pk.webp",

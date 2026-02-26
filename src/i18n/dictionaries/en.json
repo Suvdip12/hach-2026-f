@@ -18,7 +18,7 @@
     "termsOfService": "Terms of Service",
     "cookieSettings": "Cookie Settings",
     "brandTagline": "Rebooting Education for the AI Era",
-    "copyright": "© {year} CurioTech. All rights reserved.",
+    "copyright": "© {year} EasyCode. All rights reserved.",
     "run": "Run",
     "reset": "Reset",
     "enterPress": "Press Enter"
@@ -32,7 +32,7 @@
     "switchLanguage": "Switch language"
   },
   "navbar": {
-    "brandName": "CurioTech"
+    "brandName": "EasyCode"
   },
   "hero": {
     "cta": "Schedule a 30-Minute Discovery Session",
@@ -46,22 +46,22 @@
   "learningAreas": {
     "title": "Our Learning Areas",
     "curioCode": {
-     "title": "CurioCode",
+     "title": "EasyCode",
       "subtitle": "(Coding / Programming)",
       "description": "From Playful Blocks to Real Python Power — A seamless visual-to-text journey building real projects."
      },
     "curioAI": {
-      "title": "CurioAI",
+      "title": "EasyAI",
       "subtitle": "(Artificial Intelligence)",
       "description": "Explore, Train & Build AI — Kids don't just use AI, they understand it, build it, and question it."
     },
     "curioBot": {
-     "title": "CurioBot",
+     "title": "EasyBot",
       "subtitle": "(Robotics / IoT)",
       "description": "Robots in Action — Program real robots and watch your code come alive with sensors and motors."
     },
     "curioThink": {
-      "title": "CurioThink",
+      "title": "EasyThink",
       "subtitle": "(Critical Thinking)",
       "description": "Powering the Mind Behind the Machine — Logic, creativity, and real-world reasoning combined."
     }
@@ -71,9 +71,9 @@
     "coursesByAlumniOf": "Courses by Alumni of"
   },
   "team": {
-    "title": "Meet the Curiotech Team",
+    "title": "Meet the Easycode Team",
     "description": "A passionate crew of creators, educators, and engineers — shaping the next generation of innovators.",
-    "mentor1Title": "Founder, CareerCafe & CurioTech",
+    "mentor1Title": "Founder, CareerCafe & EasyCode",
     "mentor1Description": "Mentored students placed at top IT firms like Flipkart, Amazon, AmEx etc. Mentor & EdTech Leader | AI Learning | Coding & Robotics | Mentorship | Future Skills",
     "mentor1Skill1": "AI Learning",
     "mentor1Skill2": "EdTech",
@@ -113,34 +113,34 @@
   },
   "products": {
     "curioCode": {
-      "label": "CurioCode",
+      "label": "EasyCode",
       "description": "Coding & Programming"
     },
     "curioAI": {
-      "label": "CurioAI",
+      "label": "EasyAI",
       "description": "Artificial Intelligence"
     },
     "curioBot": {
-      "label": "CurioBot",
+      "label": "EasyBot",
       "description": "Robotics"
     },
     "curioThink": {
-      "label": "CurioThink",
+      "label": "EasyThink",
       "description": "Critical Thinking"
     }
   },
   "curioSections": {
     "ecosystem": {
-      "heading": "Curio Ecosystem - Rebooting Education for the AI Era",
+      "heading": "Easy Ecosystem - Rebooting Education for the AI Era",
       "points": [
-        "Seamless Integration: Curio unites thinking, coding, AI, and robotics into one connected learning journey—no silos, no gaps.",
-        "Thinking First: With CurioThink, students build logic before syntax, understanding why code works, not just how to write it.",
+        "Seamless Integration: Easy unites thinking, coding, AI, and robotics into one connected learning journey—no silos, no gaps.",
+        "Thinking First: With EasyThink, students build logic before syntax, understanding why code works, not just how to write it.",
         "Compounding Mastery: Each stage strengthens the next—logic fuels code, code unlocks AI, AI powers robotics, and robotics refines logic.",
-        "School-Ready Alignment: NEP-aligned and classroom-ready, Curio fits seamlessly into school ecosystems for easy adoption."
+        "School-Ready Alignment: NEP-aligned and classroom-ready, Easy fits seamlessly into school ecosystems for easy adoption."
       ]
     },
     "curiocode": {
-      "heading": "CurioCode - From Visual Logic to Real Python Programming",
+      "heading": "EasyCode - From Visual Logic to Real Python Programming",
       "points":[
   "Smooth Learning Path: Visual → semi-visual → text-based coding, without learning gaps.",
   "Blockly to Python Transition: Students start with drag-and-drop blocks and gradually shift to real Python.",
@@ -151,7 +151,7 @@
 
     },
     "curioai": {
-      "heading": "CurioAI - Understand, Train & Apply Artificial Intelligence",
+      "heading": "EasyAI - Understand, Train & Apply Artificial Intelligence",
       "points": [
   "How AI Works (Not Just How to Use It): Students learn how AI sees, hears, and understands — from image recognition to text analysis.",
   "AI Playground & Lab: A safe, guided AI playground where students experiment and train models.",
@@ -162,7 +162,7 @@
 
     },
     "curiobot": {
-      "heading": "CurioBot - Robotics with Intelligence in Action",
+      "heading": "EasyBot - Robotics with Intelligence in Action",
       "points": [
   "Code Meets Motion: Students program real robots and see logic translate into physical action.",
   "Sensors & Perception: Understand how robots sense, respond, and interact with their environment.",
@@ -173,7 +173,7 @@
 
     },
     "curiothink": {
-      "heading": "CurioThink - Building Thinking Before Technology",
+      "heading": "EasyThink - Building Thinking Before Technology",
       "points": [
   "Logic & Pattern Thinking: Strengthen reasoning through puzzles, patterns, and structured challenges.",
   "Creative Problem Solving: Encourage divergent thinking to explore multiple solution paths.",
@@ -184,19 +184,19 @@
     }
   },
   "about": {
-    "pageTitle": "About Us - CurioTech",
-    "whyWeExist": "Why Curiotech Exists:",
-    "intro1": "\"The future won't be a battle of Human versus AI—it will be a partnership of Human with AI.\" CurioTech isn't just a name—it's a revolution. We fused \"curiosity\" with \"technology\" It fuses a child's most powerful engine—their unstoppable curiosity—with the tools of the future. Turning childhood curiosity into the cognitive superpower that creates tomorrow's leaders, inventors, and problem-solvers. It's not just learning technology; it's curiosity weaponized by code, AI and critical thinking.",
+    "pageTitle": "About Us - EasyCode",
+    "whyWeExist": "Why Easycode Exists:",
+    "intro1": "\"The future won't be a battle of Human versus AI—it will be a partnership of Human with AI.\" EasyCode isn't just a name—it's a revolution. We fused \"curiosity\" with \"technology\" It fuses a child's most powerful engine—their unstoppable curiosity—with the tools of the future. Turning childhood curiosity into the cognitive superpower that creates tomorrow's leaders, inventors, and problem-solvers. It's not just learning technology; it's curiosity weaponized by code, AI and critical thinking.",
     "intro2": "In a world where AI can answer questions instantly, the ability to ask the right questions and think through complex problems becomes our greatest human advantage. AI's potential for change extends far beyond computer science. It impacts history, civics, writing, creativity, critical thinking, and every other aspect of society that children will encounter when they enter adulthood.",
     "foundersVision": "Founder's Vision:",
     "foundersVisionText1": "Our education system misses the critical (8–16) age window when children's brains are neurologically primed for abstract reasoning—waiting until far too late to introduce logic, Coding and problem-solving, just as AI is reshaping every career they'll enter.",
     "foundersVisionText2": "After mentoring 1,000+ students into top tech companies through our mentorship firm Career Cafe, we learned that success isn't about coding syntax or AI knowledge alone. It comes from the seamless fusion of critical thinking, coding logic, and AI literacy—learned together at the right stage of development.",
-    "foundersQuote": "\"At CurioTech, we transform raw childhood curiosity into a lifelong superpower. We train young minds to think critically and logically first—then empower them to create with AI, code, and robots.\" — Founder, CurioTech",
+    "foundersQuote": "\"At EasyCode, we transform raw childhood curiosity into a lifelong superpower. We train young minds to think critically and logically first—then empower them to create with AI, code, and robots.\" — Founder, EasyCode",
     "ourVision": "Our Vision:",
-    "ourVisionText": "CurioTech exists to close this gap. We integrate these capabilities exactly when young minds can absorb them most deeply—turning kids into confident creators who don't just use technology, but think through it, building solutions with both logic and imagination in an AI-driven world.",
+    "ourVisionText": "EasyCode exists to close this gap. We integrate these capabilities exactly when young minds can absorb them most deeply—turning kids into confident creators who don't just use technology, but think through it, building solutions with both logic and imagination in an AI-driven world.",
     "ourVisionQuote": "\"In an age where machines can think, our mission is to help children think smarter.\"",
     "educationPhilosophy": "Education Philosophy:",
-    "educationPhilosophyText1": "At CurioTech, we believe AI should be a collaborator, not a crutch. Our philosophy is to nurture critical and logical thinking first, then layer AI literacy and coding skills on top—so children learn to reason through problems before applying technology. By balancing human judgment with machine intelligence, we prepare young learners not just to use AI tools, but to question, guide, and innovate with them.",
+    "educationPhilosophyText1": "At EasyCode, we believe AI should be a collaborator, not a crutch. Our philosophy is to nurture critical and logical thinking first, then layer AI literacy and coding skills on top—so children learn to reason through problems before applying technology. By balancing human judgment with machine intelligence, we prepare young learners not just to use AI tools, but to question, guide, and innovate with them.",
     "educationPhilosophyText2": "Our curriculum creates the technical foundation and thinking frameworks that open doors to top universities and advanced technology careers. We're building tomorrow's innovators today."
   },
   "contact": {
@@ -312,7 +312,7 @@
     "demos": "Demos",
     "demosAvailability": "Schedule your personalized demo",
     "liveChatAvailability": "Available 24/7 for urgent issues",
-    "whyChooseCurioTech": "Why Choose CurioTech?",
+    "whyChooseEasyCode": "Why Choose EasyCode?",
     "feature1Title": "Expert-Led Courses",
     "feature1Desc": "IIT alumni instructors with industry experience",
     "feature2Title": "Progressive Learning",
@@ -324,23 +324,23 @@
     "faq2Question": "Can I schedule a demo outside of regular business hours?",
     "faq2Answer": "Yes! While our standard demo hours are Monday-Friday 9:00 AM - 5:00 PM EST, we offer evening and weekend demonstrations by special request. Simply mention your preferred time when booking, and we'll accommodate your schedule.",
     "faq3Question": "Do you offer phone support?",
-    "faq3Answer": "Yes! Call 1-800-CURIOTECH during business hours for immediate assistance. For technical issues, our live chat feature often provides the fastest response. We also have a comprehensive help center available 24/7.",
-    "faq4Question": "What age groups does CurioTech serve?",
-    "faq4Answer": "CurioTech is designed for students aged 8-16, focusing on the critical developmental window when children's brains are most receptive to learning logic, coding, and problem-solving skills. Our curriculum adapts to different skill levels within this age range.",
+    "faq3Answer": "Yes! Call 1-800-EASYCODE during business hours for immediate assistance. For technical issues, our live chat feature often provides the fastest response. We also have a comprehensive help center available 24/7.",
+    "faq4Question": "What age groups does EasyCode serve?",
+    "faq4Answer": "EasyCode is designed for students aged 8-16, focusing on the critical developmental window when children's brains are most receptive to learning logic, coding, and problem-solving skills. Our curriculum adapts to different skill levels within this age range.",
     "emailRequired": "Email is required",
     "invalidEmail": "Please enter a valid email address",
     "phoneRequired": "Phone number is required",
     "phoneDigits": "Phone number must be exactly 10 digits"
   },
   "curioCodePage": {
-    "heroTitle": "CurioCode: A Structured Coding Journey",
+    "heroTitle": "EasyCode: A Structured Coding Journey",
     "heroSubtitle": "Curiosity meets AI—learn, build, create.",
     "heroDescription": "From visual blocks to real Python programming, our three-stage approach takes kids from complete beginners to confident coders through engaging, age-appropriate learning.",
     "progressiveStages": "Progressive Stages",
     "startingAge": "Starting Age",
     "handsOnProjects": "Hands-on Projects",
     "exploreJourney": "Explore the Journey",
-    "learningPathTitle": "The CurioCode Learning Path",
+    "learningPathTitle": "The EasyCode Learning Path",
     "learningPathSubtitle": "Watch your child progress through three carefully designed stages",
     "stage1": "Stage 1",
     "stage1Title": "Blockly Visual Blocks",
@@ -359,7 +359,7 @@
     "faq3Question": "What if my child gets stuck or frustrated?",
     "faq3Answer": "Our curriculum is designed to minimize frustration. Each stage provides immediate feedback and our instructors offer personalized support.",
     "ctaTitle": "Start Your Child's Coding Journey Today",
-    "ctaSubtitle": "Join thousands of parents who've chosen CurioCode for their child's programming education.",
+    "ctaSubtitle": "Join thousands of parents who've chosen EasyCode for their child's programming education.",
     "startFreeTrial": "Start Free Trial",
     "scheduleConsultation": "Schedule Consultation",
     "ctaDisclaimer": "✓ No commitment • ✓ Cancel anytime • ✓ 30-day money-back guarantee",
@@ -426,7 +426,7 @@
     "stage3Project4": "Simple AI Projects"
   },
   "curioAIPage": {
-    "heroTitle": "CurioAI: AI Mastery for Young Innovators",
+    "heroTitle": "EasyAI: AI Mastery for Young Innovators",
     "heroSubtitle": "From Curiosity to AI Leadership",
     "heroDescription": "A comprehensive 6-stage AI learning journey designed for students aged 10-16. Transform natural curiosity into professional AI capabilities through hands-on projects and real-world applications.",
     "ageRange": "Age Range:",
@@ -494,7 +494,7 @@
     "stage6Activities": "Peer Mentoring, Original Research, Policy Discussions, Industry Networking",
     "keyMilestone": "Key Milestone:",
     "activities": "Activities:",
-    "whyChooseTitle": "Why Choose CurioAI?",
+    "whyChooseTitle": "Why Choose EasyAI?",
     "feature1Title": "Developmental Alignment",
     "feature1Desc": "Carefully designed to match cognitive development stages",
     "feature2Title": "Smooth Transitions",
@@ -507,21 +507,21 @@
     "feature5Desc": "Guidance from experienced tech professionals",
     "feature6Title": "Real-World Focus",
     "feature6Desc": "Projects that solve actual problems and create impact",
-    "instructorTitle": "CurioTech Expert Team",
-    "instructorName": "CurioTech Expert Team",
+    "instructorTitle": "EasyCode Expert Team",
+    "instructorName": "EasyCode Expert Team",
     "instructorBio": "Industry veterans from top tech companies with 10+ years in AI education",
     "instructorCredentials": "IIT Alumni, Google & Amazon backgrounds",
     "footerText": "Empowering young minds with AI education"
   },
   "curioBotPage": {
-    "heroTitle": "CurioBot: Robotics for Young Innovators",
+    "heroTitle": "EasyBot: Robotics for Young Innovators",
     "heroSubtitle": "Building the Future, One Robot at a Time",
     "heroDescription": "Transform curiosity into innovation with hands-on robotics education. Learn programming, engineering, and problem-solving through interactive robot projects designed for students aged 8-16.",
     "comingSoon": "Coming Soon",
-    "comingSoonText": "We're building something amazing! CurioBot will revolutionize how students learn robotics and engineering. Stay tuned for updates."
+    "comingSoonText": "We're building something amazing! EasyBot will revolutionize how students learn robotics and engineering. Stay tuned for updates."
   },
   "curioThinkPage": {
-    "heroTitle": "CurioThink: Critical Thinking & Problem Solving",
+    "heroTitle": "EasyThink: Critical Thinking & Problem Solving",
     "heroSubtitle": "Think Critically, Solve Creatively",
     "heroDescription": "Develop essential critical thinking and problem-solving skills through engaging puzzles, logic games, and real-world challenges. Build the foundation for success in coding, AI, and beyond.",
     "comingSoon": "Coming Soon",
@@ -537,7 +537,7 @@
     "turtleGraphics": "Turtle Graphics",
     "turtleGraphicsDesc": "Draw and learn with turtle graphics",
     "turtle": "Turtle",
-    "loadingStudio": "Loading CurioCode Studio...",
+    "loadingStudio": "Loading EasyCode Studio...",
     "preparingEnv": "Preparing your coding environment"
   },
   "codeEditor": {
@@ -659,7 +659,7 @@
     "searchHint": "Try searching for what you need or check our navigation menu"
   },
   "auth": {
-    "welcomeTitle": "Welcome to CurioTech",
+    "welcomeTitle": "Welcome to EasyCode",
     "choosePortal": "Choose your login portal to continue",
     "selectRole": "Select the appropriate portal based on your role",
     "kidsLogin": "Kids Login",

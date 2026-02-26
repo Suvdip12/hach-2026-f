@@ -45,35 +45,35 @@ const curioSectionsData: CurioSectionData[] = [
   {
     id: "ecosystem",
     imageSrc: IMAGES.general.whyus,
-    imageAlt: "Curio Ecosystem showcasing integrated learning",
+    imageAlt: "Easy Ecosystem showcasing integrated learning",
     imagePosition: "left",
     icons: ["Brain", "Lightbulb", "Target", "School"],
   },
   {
     id: "curiocode",
     imageSrc: IMAGES.general.code1,
-    imageAlt: "CurioCode showcasing block-based and Python programming",
+    imageAlt: "EasyCode showcasing block-based and Python programming",
     imagePosition: "right",
     icons: ["Brain", "Target", "Lightbulb", "School", "Ruler"],
   },
   {
     id: "curioai",
     imageSrc: IMAGES.general.ai1,
-    imageAlt: "CurioAI showcasing machine learning and AI literacy",
+    imageAlt: "EasyAI showcasing machine learning and AI literacy",
     imagePosition: "left",
     icons: ["Brain", "Target", "Tv2Icon", "Ruler", "Lightbulb"],
   },
   {
     id: "curiobot",
     imageSrc: IMAGES.general.robot1,
-    imageAlt: "CurioBot showcasing robotics and IoT learning",
+    imageAlt: "EasyBot showcasing robotics and IoT learning",
     imagePosition: "right",
     icons: ["Brain", "Target", "School", "Lightbulb", "Ruler"],
   },
   {
     id: "curiothink",
     imageSrc: IMAGES.general.aptitude1,
-    imageAlt: "CurioThink showcasing critical thinking and problem-solving",
+    imageAlt: "EasyThink showcasing critical thinking and problem-solving",
     imagePosition: "left",
     icons: ["Brain", "Lightbulb", "Target", "School"],
   },
@@ -149,7 +149,7 @@ export default function CurioSection({ sectionId }: CurioSectionProps) {
         style={{ marginBottom: "30px", textAlign: "center" }}
       >
         <span className="landing-section-label">
-          {sectionId.replace("curio", "Curio ")}
+          {sectionId.replace("curio", "Easy ")}
         </span>
         <Typography variant="heading" size="7" align="center">
           {heading}

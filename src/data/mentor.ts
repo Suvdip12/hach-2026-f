@@ -4,7 +4,7 @@ export const mentorData = [
   {
     index: 1,
     name: "Amit Singh",
-    title: "Founder, CareerCafe & CurioTech",
+    title: "Founder, CareerCafe & EasyCode",
     expertise: "EdTech Leadership",
     image: IMAGES.about.founder,
     description:

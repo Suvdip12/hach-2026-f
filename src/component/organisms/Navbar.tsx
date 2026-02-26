@@ -120,7 +120,7 @@ export default function Navbar({ tabs, activeTab, onTabChange }: NavbarProps) {
 
   const currentNavLinks = isStudentPage ? studentRoutes : landingRoutes;
 
-  // Curio Products Logic
+  // Easy Products Logic
   const translatedCurioRoutes = curioRoutes.map((route) => {
     const keyMap: Record<string, string> = {
       "/curiocode": "curioCode",
@@ -180,7 +180,7 @@ export default function Navbar({ tabs, activeTab, onTabChange }: NavbarProps) {
                 color="orange"
                 className="brand-text"
               >
-                CurioTech
+                EasyCode
               </Typography>
             </Flex>
           </Link>

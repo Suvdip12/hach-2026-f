@@ -1,5 +1,5 @@
 /* ============================================
-   Turtle Graphics Editor - CurioTech Theme
+   Turtle Graphics Editor - EasyCode Theme
    Kid-Friendly & Professional Design
    ============================================ */
 
@@ -91,7 +91,7 @@
   gap: var(--space-4);
 }
 
-/* Card Styles - Matching CurioTech Theme */
+/* Card Styles - Matching EasyCode Theme */
 .turtle-card {
   background: var(--color-surface);
   border-radius: var(--radius-4);

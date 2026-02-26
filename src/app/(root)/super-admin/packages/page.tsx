@@ -174,22 +174,22 @@ export default function PackagesPage() {
                   <Table.ColumnHeaderCell>Domain</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell align="center">
                     <Flex align="center" gap="1" justify="center">
-                      <Code size={14} /> CurioCode
+                      <Code size={14} /> EasyCode
                     </Flex>
                   </Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell align="center">
                     <Flex align="center" gap="1" justify="center">
-                      <Brain size={14} /> CurioAI
+                      <Brain size={14} /> EasyAI
                     </Flex>
                   </Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell align="center">
                     <Flex align="center" gap="1" justify="center">
-                      <Bot size={14} /> CurioBot
+                      <Bot size={14} /> EasyBot
                     </Flex>
                   </Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell align="center">
                     <Flex align="center" gap="1" justify="center">
-                      <Lightbulb size={14} /> CurioThink
+                      <Lightbulb size={14} /> EasyThink
                     </Flex>
                   </Table.ColumnHeaderCell>
                 </Table.Row>

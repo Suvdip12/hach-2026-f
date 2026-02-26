@@ -4,7 +4,7 @@ import "./curiothink.css";
 import Navbar from "@/component/organisms/Navbar";
 import { useTranslation } from "@/i18n";
 
-export default function CurioThinkPage() {
+export default function EasyThinkPage() {
   const { t } = useTranslation();
 
   return (

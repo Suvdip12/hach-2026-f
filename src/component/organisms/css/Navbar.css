@@ -133,7 +133,7 @@
   max-width: 600px;
 }
 
-/* Curio Products Dropdown - Landing Page */
+/* Easy Products Dropdown - Landing Page */
 .curio-dropdown-landing {
   position: relative;
 }
@@ -236,7 +236,7 @@
   color: var(--gray-10);
 }
 
-/* Mobile Curio Products Section */
+/* Mobile Easy Products Section */
 .mobile-section-landing {
   border-bottom: 2px solid transparent;
   border-image: linear-gradient(
@@ -702,7 +702,7 @@
   line-height: 1.2;
 }
 
-/* Inline Navbar Tabs (shown on pages with tabs like CurioCode) */
+/* Inline Navbar Tabs (shown on pages with tabs like EasyCode) */
 .navbar-tabs {
   display: none;
 }

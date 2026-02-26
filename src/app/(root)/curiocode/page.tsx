@@ -10,7 +10,7 @@ import { Plus, Minus } from "lucide-react";
 import { useTranslation } from "@/i18n";
 import "./curiocode.css";
 
-export default function CurioCodePage() {
+export default function EasyCodePage() {
   const { t } = useTranslation();
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [selectedStage, setSelectedStage] = useState<number>(1);

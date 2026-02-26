@@ -5,7 +5,7 @@ import Navbar from "@/component/organisms/Navbar";
 import { useTranslation } from "@/i18n";
 import { showToast } from "@/lib/toast.config";
 
-export default function CurioAIPage() {
+export default function EasyAIPage() {
   const { t } = useTranslation();
 
   const showEnrollmentModal = () => {
@@ -446,7 +446,7 @@ export default function CurioAIPage() {
           <div className="testimonials__grid">
             <div className="testimonial">
               <div className="testimonial__quote">
-                &ldquo;CurioAI helped me understand how AI really works. Now
+                &ldquo;EasyAI helped me understand how AI really works. Now
                 I&rsquo;m building my own chatbot!&rdquo;
               </div>
               <div className="testimonial__author">
@@ -549,7 +549,7 @@ export default function CurioAIPage() {
             <div className="footer__content">
               <div className="footer__brand">
                 <span className="footer__logo">CT</span>
-                <span className="footer__brand-text">CurioTech</span>
+                <span className="footer__brand-text">EasyCode</span>
               </div>
               <p className="footer__text">{t("curioAIPage.footerText")}</p>
             </div>

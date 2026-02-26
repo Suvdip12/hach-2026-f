@@ -22,7 +22,7 @@ export default function FooterBrand() {
           src={IMAGES.logo.icon}
           width={200}
           height={200}
-          alt="CurioTech Logo"
+          alt="EasyCode Logo"
           className="footer-logo"
         />
       </Flex>

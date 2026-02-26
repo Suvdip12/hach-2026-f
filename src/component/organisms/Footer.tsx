@@ -159,7 +159,7 @@ export default function Footer() {
         className="footer-bottom-section"
       >
         <Typography variant="text" size="2" className="footer-copyright">
-          © {year} CurioTech. {t("common.allRightsReserved")}
+          © {year} EasyCode. {t("common.allRightsReserved")}
         </Typography>
 
         <Flex direction="row" gap="4" wrap="wrap" className="footer-links-row">
