@@ -86,7 +86,6 @@ export const IMAGES = {
       "https://res.cloudinary.com/dvhjyombi/image/upload/v1770835422/image-upload-app/jhupxeh4lkbkipqlvblp.webp",
     robot2:
       "https://res.cloudinary.com/dvhjyombi/image/upload/v1770835422/image-upload-app/r6jreg5p0gmwd48c6vb9.webp",
-    whyus:
-      "https://res.cloudinary.com/dvhjyombi/image/upload/v1770863649/image-upload-app/emj5sco9o1avl2zfro1m.webp",
+    whyus: "/eco.png",
   },
 };
