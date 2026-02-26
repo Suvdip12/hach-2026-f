@@ -1,0 +1,557 @@
+/* Global Design Tokens for Landing Page Only */
+:root {
+  /* Premium Colors - Scoped variables could be considered but these names are specific enough */
+  --primary-gradient: linear-gradient(135deg, #ff6b35 0%, #ff8f5a 100%);
+  --secondary-gradient: linear-gradient(135deg, #2b3035 0%, #41484d 100%);
+  --surface-glass: rgba(255, 255, 255, 0.8);
+  --surface-glass-border: rgba(255, 255, 255, 0.5);
+
+  /* Spacing System - Tighter */
+  --space-unit: 8px;
+  --section-spacing: 80px;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 40px rgba(255, 107, 53, 0.15);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* Radius */
+  --radius-premium: 24px;
+  --radius-card: 20px;
+  --radius-button: 100px;
+
+  /* Animation */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles Scoped to Landing Page */
+/* Base Styles Scoped to Landing Page */
+.landing-page-wrapper {
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 107, 53, 0.05) 0%,
+      rgba(255, 255, 255, 0) 50%
+    ),
+    var(--color-background);
+  overflow-x: clip; /* Fix stick navbar issue */
+  width: 100%;
+  min-height: 100vh;
+}
+
+.landing-content-container {
+  width: 100%;
+  max-width: 1600px; /* Limit max width on large screens */
+  margin-inline: auto; /* Center content */
+  position: relative;
+}
+
+@media (min-width: 1920px) {
+  .landing-content-container {
+    max-width: 1800px; /* Allow wider content on very large screens */
+  }
+}
+
+/* Animations - Global names but low collision risk */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+@keyframes glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section */
+.landing-hero-container {
+  min-height: 85vh;
+  display: flex !important;
+  align-items: center;
+  position: relative;
+  padding: 40px 0;
+}
+
+.landing-hero-text-content {
+  z-index: 2;
+  position: relative;
+}
+
+.landing-hero-title {
+  font-size: 3.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  color: var(--gray-12) !important;
+  letter-spacing: -0.02em;
+  margin-bottom: 0 !important;
+}
+
+.hero-highlight {
+  color: var(--blue-9) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--blue-9) !important;
+}
+
+.hero-highlight-primary {
+  color: var(--orange-9) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--orange-9) !important;
+}
+
+.landing-hero-subtitle {
+  color: var(--gray-10) !important;
+  line-height: 1.6 !important;
+  max-width: 500px;
+  font-size: 0.95rem !important;
+}
+
+.landing-hero-image-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.landing-hero-blob {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--orange-4);
+  border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Learning Area Cards */
+.learning-area-card {
+  background: white;
+  border: 1px solid var(--gray-4);
+  border-radius: var(--radius-card);
+  padding: 40px !important;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-area-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--orange-8), var(--orange-5));
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.learning-area-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: transparent;
+}
+
+.learning-area-card:hover::before {
+  opacity: 1;
+}
+
+.learning-area-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--orange-3);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: var(--transition-smooth);
+  color: var(--orange-9);
+}
+
+.learning-area-card:hover .learning-area-icon-wrapper {
+  background: var(--orange-9);
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.learning-area-title {
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  color: var(--gray-12) !important;
+}
+
+.learning-area-description {
+  color: var(--gray-10) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Brand Logos */
+.landing-brand-logo-container {
+  padding: 40px;
+  background: var(--gray-2);
+  border-radius: var(--radius-premium);
+  border: 1px dashed var(--gray-5);
+}
+
+.landing-brand-logo {
+  transition: var(--transition-smooth);
+  /* mix-blend-mode: multiply; Removed to keep original colors */
+}
+
+.landing-brand-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Section Headings */
+.landing-section-heading-wrapper {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.landing-section-label {
+  color: var(--orange-9);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Team Section */
+.team-member {
+  background: white;
+  border-radius: 20px; /* Fixed robust radius */
+  padding: 20px 16px; /* Tighter padding */
+  border: 1px solid var(--gray-4);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03); /* Subtle base shadow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.team-member:hover {
+  border-color: var(--orange-5);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+}
+
+.team-member-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 16px; /* Reduced margin */
+  padding: 3px;
+  background: white;
+  border: 1px solid var(--gray-3); /* Thinner border */
+  transition: inherit;
+}
+
+.team-member:hover .team-member-image {
+  border-color: var(--orange-8);
+  transform: scale(1.05);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-weight: 800 !important;
+  color: var(--gray-12) !important;
+  margin-bottom: 4px;
+}
+
+.team-role {
+  color: var(--orange-10) !important;
+  font-weight: 600 !important;
+  margin-bottom: 16px;
+  font-size: 0.9rem !important;
+}
+
+.team-skill-tag {
+  background: var(--gray-3);
+  color: var(--gray-11);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.team-member:hover .team-skill-tag {
+  background: var(--gray-3); /* Keep gray, don't colorize */
+  color: var(--gray-12);
+  border-color: var(--gray-6);
+}
+
+/* Social Icons - Grayscale & Modern */
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.team-social-link {
+  color: var(--gray-10);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.team-social-link:hover {
+  color: var(--gray-12);
+  background: var(--gray-3);
+  transform: translateY(-2px);
+}
+
+/* Team Carousel Specifics - Alignment Fixes */
+.team-carousel-container .carousel__viewport {
+  overflow: visible !important;
+  padding: 20px 0;
+}
+
+.team-carousel-container .carousel__container {
+  align-items: stretch;
+  gap: 24px;
+}
+
+.team-carousel-container .carousel__slide {
+  flex: 0 0 280px;
+  min-width: 0;
+  height: auto;
+  padding: 0 8px; /* Tighter gap between cards */
+}
+
+@media (max-width: 768px) {
+  .team-carousel-container .carousel__slide {
+    flex: 0 0 280px;
+  }
+}
+
+
+/* Landing Page Buttons (Scoped) */
+.landing-btn-primary {
+  background: var(--orange-9) !important;
+  color: white !important;
+  border: none !important;
+  padding: 0 32px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(247, 116, 20, 0.3) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.landing-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(247, 116, 20, 0.4) !important;
+  background: var(--orange-10) !important;
+}
+
+.landing-btn-play {
+  background: transparent !important;
+  border: none !important;
+  color: var(--blue-9) !important;
+  padding: 0 !important;
+  height: auto !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.landing-btn-play svg {
+  width: 40px;
+  height: 40px;
+  background: var(--blue-9);
+  border-radius: 50%;
+  padding: 10px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.landing-btn-play:hover svg {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px var(--blue-a6);
+}
+
+.landing-btn-secondary {
+  background: transparent !important;
+  border: 2px solid var(--gray-7) !important;
+  color: var(--gray-11) !important;
+  padding: 0 32px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 0.95rem !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.landing-btn-secondary:hover {
+  border-color: var(--gray-12) !important;
+  color: var(--gray-12) !important;
+  background: var(--gray-2) !important;
+  transform: translateY(-2px);
+}
+
+/* Hero Feature Bullets */
+.landing-hero-features {
+  margin-top: 8px;
+}
+
+.feature-check-icon {
+  color: var(--orange-9);
+  flex-shrink: 0;
+}
+
+/* Responsive Hero */
+@media (max-width: 768px) {
+  .landing-hero-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .landing-hero-container {
+    min-height: auto;
+    padding: 20px 0;
+  }
+  
+  .landing-hero-image-container {
+    max-width: 100%;
+    margin-top: 32px;
+  }
+}
+
+/* Unique Sections */
+.usp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+/* Dark Mode Overrides */
+:is(.dark, .dark-theme) {
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 20px 40px rgba(255, 107, 53, 0.2);
+}
+
+:is(.dark, .dark-theme) .landing-page-wrapper {
+  background: radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 107, 53, 0.1) 0%,
+      rgba(15, 15, 15, 0) 50%
+    ),
+    #111;
+}
+
+:is(.dark, .dark-theme) .learning-area-card,
+:is(.dark, .dark-theme) .team-member {
+  background: var(--gray-2);
+  border-color: var(--gray-4);
+}
+
+:is(.dark, .dark-theme) .landing-hero-feature-pill {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--gray-6);
+  color: var(--gray-11);
+}
+
+:is(.dark, .dark-theme) .landing-brand-logo {
+  background: transparent;
+  /* filter: grayscale(100%) brightness(200%); Removed as requested */
+  /* mix-blend-mode: normal; Removed */
+  opacity: 1; /* Ensure visible in dark mode */
+}
+
+/* :is(.dark, .dark-theme) .brand-logo:hover {
+  filter: grayscale(0%) brightness(100%);
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .landing-hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 40px;
+    gap: 40px;
+  }
+
+  .landing-hero-container .landing-btn-primary,
+  .landing-hero-container .landing-btn-secondary {
+    width: 100%;
+  }
+
+  .learning-area-card {
+    padding: 24px !important;
+  }
+}

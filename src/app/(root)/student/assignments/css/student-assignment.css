@@ -1,0 +1,13 @@
+/* CSS for the Student Assignment Details Page */
+
+.student-assignment-page {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .student-assignment-page {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}

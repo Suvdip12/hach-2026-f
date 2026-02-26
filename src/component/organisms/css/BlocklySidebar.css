@@ -1,0 +1,249 @@
+/* Blockly Sidebar organism styles */
+
+.blockly-sidebar {
+  background: var(--color-panel-solid);
+  border-right: 1px solid var(--gray-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 200px;
+  max-width: 400px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.blockly-sidebar-header {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--gray-6);
+  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.blockly-sidebar-title {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-12);
+  margin: 0;
+  text-align: center;
+}
+
+.blockly-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--space-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-8) var(--gray-3);
+  min-height: 0; /* Critical for flexbox scrolling */
+}
+
+.blockly-sidebar-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.blockly-sidebar-content::-webkit-scrollbar-track {
+  background: var(--gray-3);
+  border-radius: var(--radius-1);
+}
+
+.blockly-sidebar-content::-webkit-scrollbar-thumb {
+  background: var(--gray-8);
+  border-radius: var(--radius-1);
+  transition: background 0.2s ease;
+}
+
+.blockly-sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-9);
+}
+
+/* Dark mode support */
+.dark .blockly-sidebar {
+  background: var(--gray-2);
+  border-right-color: var(--gray-7);
+}
+
+.dark .blockly-sidebar-header {
+  background: var(--gray-3);
+  border-bottom-color: var(--gray-7);
+}
+
+.dark .blockly-sidebar-title {
+  color: var(--gray-11);
+}
+
+.dark .blockly-sidebar-content::-webkit-scrollbar-track {
+  background: var(--gray-4);
+}
+
+.dark .blockly-sidebar-content::-webkit-scrollbar-thumb {
+  background: var(--gray-7);
+}
+
+.dark .blockly-sidebar-content::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-6);
+}
+
+/* Legacy sidebar styles for compatibility */
+.sidebar {
+  background: var(--color-panel-solid);
+  border-right: 1px solid var(--gray-6);
+  height: 100%;
+  overflow-y: auto;
+  padding-top: var(--space-4);
+  box-shadow: var(--shadow-1);
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar-header {
+  padding: 0 var(--space-4) var(--space-3) var(--space-4);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-12);
+}
+
+.sidebar-header-span {
+  margin-left: var(--space-2);
+  font-size: var(--font-size-1);
+  color: var(--gray-9);
+  font-weight: var(--font-weight-regular);
+}
+
+.sidebar-nav {
+  padding: 0 var(--space-2) var(--space-4) var(--space-2);
+}
+
+/* Dark mode for legacy sidebar */
+.dark .sidebar {
+  background: var(--gray-2);
+  border-right-color: var(--gray-7);
+}
+
+.dark .sidebar-header {
+  color: var(--gray-11);
+}
+
+.dark .sidebar-header-span {
+  color: var(--gray-8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .blockly-sidebar {
+    min-width: 180px;
+  }
+
+  .blockly-sidebar-header {
+    padding: var(--space-3);
+  }
+
+  .blockly-sidebar-title {
+    font-size: var(--font-size-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .blockly-sidebar {
+    min-width: 160px;
+  }
+
+  .blockly-sidebar-header {
+    padding: var(--space-2);
+  }
+
+  .blockly-sidebar-title {
+    font-size: var(--font-size-2);
+  }
+}
+
+/* Blockly Sidebar organism styles */
+
+.blockly-sidebar {
+  background: var(--color-panel-solid);
+  border-right: 1px solid var(--gray-6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-width: 50px; /* Allow it to go down to 50px */
+  max-width: 400px;
+  transition: width 0.3s ease; /* Smooth animation */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Specific style when collapsed */
+.blockly-sidebar.collapsed {
+  width: 50px !important; /* Force width */
+}
+
+.blockly-sidebar-header {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--gray-6);
+  background: var(--color-surface);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  min-height: 52px; 
+}
+
+
+.blockly-sidebar.collapsed .blockly-sidebar-header {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+.blockly-sidebar-title {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-12);
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.sidebar-collapse-button {
+  padding: 6px;
+  background: var(--color-surface);
+  border: 1px solid var(--gray-6);
+  border-radius: var(--radius-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-11);
+  transition: all 0.2s ease;
+}
+
+.sidebar-collapse-button:hover {
+  background: var(--gray-3);
+  border-color: var(--gray-7);
+  color: var(--gray-12);
+}
+
+.blockly-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: var(--space-2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-8) var(--gray-3);
+  min-height: 0;
+}
+
+.dark .sidebar-collapse-button {
+  background: var(--gray-3);
+  border-color: var(--gray-7);
+  color: var(--gray-11);
+}
+
+.dark .sidebar-collapse-button:hover {
+  background: var(--gray-4);
+  color: var(--gray-12);
+}

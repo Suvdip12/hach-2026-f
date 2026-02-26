@@ -1,0 +1,194 @@
+/* CurioThink Page Styles */
+.curiothink-page {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.curiothink-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.curiothink-hero {
+  background: linear-gradient(
+    135deg,
+    var(--violet-9) 0%,
+    var(--purple-11) 100%
+  );
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.curiothink-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.curiothink-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.curiothink-hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.curiothink-hero-subtitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 1.5rem;
+}
+
+.curiothink-hero-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Coming Soon Section */
+.curiothink-coming-soon {
+  padding: 6rem 2rem;
+  background: var(--color-surface);
+}
+
+.coming-soon-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border: 2px solid var(--gray-6);
+  border-radius: var(--radius-5);
+  background: var(--color-background);
+}
+
+.coming-soon-icon {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.coming-soon-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gray-12);
+  margin-bottom: 1rem;
+}
+
+.coming-soon-text {
+  font-size: 1.125rem;
+  color: var(--gray-11);
+  line-height: 1.7;
+}
+
+/* Dark Mode */
+:is(.dark, .dark-theme) .curiothink-hero {
+  background: linear-gradient(
+    135deg,
+    var(--violet-10) 0%,
+    var(--purple-12) 100%
+  );
+}
+
+:is(.dark, .dark-theme) .coming-soon-content {
+  background: var(--gray-2);
+  border-color: var(--gray-7);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .curiothink-hero-title {
+    font-size: 3rem;
+  }
+
+  .curiothink-hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .curiothink-container {
+    padding: 0 1.5rem;
+  }
+
+  .curiothink-hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .curiothink-hero-title {
+    font-size: 2.25rem;
+  }
+
+  .curiothink-hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .curiothink-hero-description {
+    font-size: 1rem;
+  }
+
+  .curiothink-coming-soon {
+    padding: 4rem 1.5rem;
+  }
+
+  .coming-soon-icon {
+    font-size: 4rem;
+  }
+
+  .coming-soon-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .curiothink-hero {
+    padding: 3rem 1rem;
+  }
+
+  .curiothink-hero-title {
+    font-size: 1.875rem;
+  }
+
+  .curiothink-hero-subtitle {
+    font-size: 1.125rem;
+  }
+
+  .curiothink-coming-soon {
+    padding: 3rem 1rem;
+  }
+
+  .coming-soon-content {
+    padding: 3rem 1.5rem;
+  }
+}

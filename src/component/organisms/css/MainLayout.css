@@ -1,0 +1,16 @@
+/* MainLayout organism styles */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--color-background);
+  color: var(--gray-12);
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+/* Dark mode support */
+.dark .main-layout {
+  background: var(--color-background);
+}

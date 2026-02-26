@@ -1,0 +1,777 @@
+/* ============================================
+   Turtle Graphics Editor - CurioTech Theme
+   Kid-Friendly & Professional Design
+   ============================================ */
+
+/* Main Container */
+.turtle-container {
+  width: 100%;
+  height: 100%;
+  background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header - Removed for seamless integration */
+.turtle-header {
+  display: none;
+}
+
+.turtle-header-content,
+.turtle-header-inner,
+.turtle-header-left,
+.turtle-back-button,
+.turtle-title-section,
+.turtle-title,
+.turtle-status,
+.turtle-status-indicator {
+  display: none;
+}
+
+.turtle-title-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.turtle-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.turtle-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.turtle-status-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #4ade80;
+  border-radius: 9999px;
+}
+
+/* Main Content Layout */
+.turtle-main {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: var(--space-4);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.turtle-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  max-width: 1600px;
+  margin: 0 auto;
+  height: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .turtle-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.turtle-col-span-2 {
+  grid-column: span 1;
+}
+
+.turtle-space-y {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Card Styles - Matching CurioTech Theme */
+.turtle-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-4);
+  box-shadow: 0 2px 12px hsl(from var(--gray-12) h s l / 0.06);
+  border: 1px solid var(--gray-4);
+  padding: var(--space-4);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.turtle-card:hover {
+  box-shadow: 0 4px 16px hsl(from var(--gray-12) h s l / 0.08);
+  border-color: var(--gray-5);
+}
+
+.turtle-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--gray-4);
+}
+
+.turtle-card-title {
+  font-size: var(--font-size-4);
+  font-weight: 600;
+  color: var(--gray-12);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  letter-spacing: -0.01em;
+}
+
+.turtle-card-subtitle {
+  font-size: var(--font-size-2);
+  color: var(--gray-11);
+  opacity: 0.9;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Canvas - Fun & Playful */
+.turtle-canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-3);
+}
+
+.turtle-canvas-container {
+  position: relative;
+}
+
+.turtle-canvas {
+  border: 2px solid var(--orange-6);
+  background: var(--color-panel-solid);
+  border-radius: var(--radius-3);
+  box-shadow:
+    inset 0 2px 8px hsl(from var(--gray-12) h s l / 0.05),
+    0 4px 12px hsl(from var(--orange-9) h s l / 0.15);
+  transition: all 0.3s ease;
+}
+
+.turtle-canvas:hover {
+  border-color: var(--orange-8);
+  box-shadow:
+    inset 0 2px 8px hsl(from var(--gray-12) h s l / 0.05),
+    0 6px 20px hsl(from var(--orange-9) h s l / 0.25);
+  transform: scale(1.01);
+}
+
+/* Command Input - Kid-Friendly */
+.turtle-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.turtle-input-wrapper {
+  position: relative;
+}
+
+.turtle-input {
+  width: 100%;
+  padding: var(--space-3);
+  border: 2px solid var(--gray-6);
+  background: var(--color-surface);
+  border-radius: var(--radius-3);
+  font-family: var(--code-font-family);
+  color: var(--gray-12);
+  font-size: var(--font-size-3);
+  transition: all 0.2s ease;
+}
+
+.turtle-input::placeholder {
+  color: var(--gray-9);
+  opacity: 0.7;
+}
+
+.turtle-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(from var(--orange-9) h s l / 0.2);
+  border-color: var(--orange-8);
+  background: var(--color-background);
+}
+
+.turtle-input-hint {
+  position: absolute;
+  top: 50%;
+  right: var(--space-3);
+  transform: translateY(-50%);
+  color: var(--gray-9);
+  font-size: var(--font-size-1);
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .turtle-input-hint {
+    display: none;
+  }
+}
+
+/* Buttons - Fun & Inviting for Kids */
+.turtle-button-group {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.turtle-button {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  color: white;
+  border-radius: var(--radius-3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  font-size: var(--font-size-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.turtle-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.5s,
+    height 0.5s;
+}
+
+.turtle-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.turtle-button-primary {
+  background: linear-gradient(
+    135deg,
+    var(--orange-9) 0%,
+    var(--orange-10) 100%
+  );
+  box-shadow: 0 4px 12px hsl(from var(--orange-9) h s l / 0.3);
+}
+
+.turtle-button-primary:hover {
+  background: linear-gradient(
+    135deg,
+    var(--orange-10) 0%,
+    var(--orange-11) 100%
+  );
+  box-shadow: 0 6px 20px hsl(from var(--orange-9) h s l / 0.4);
+  transform: translateY(-2px);
+}
+
+.turtle-button-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px hsl(from var(--orange-9) h s l / 0.3);
+}
+
+.turtle-button-secondary {
+  background: var(--gray-5);
+  color: var(--gray-12);
+  flex: 0 0 auto;
+  box-shadow: 0 2px 6px hsl(from var(--gray-12) h s l / 0.1);
+}
+
+.turtle-button-secondary:hover {
+  background: var(--gray-6);
+  box-shadow: 0 4px 12px hsl(from var(--gray-12) h s l / 0.15);
+  transform: translateY(-2px);
+}
+
+.turtle-button-secondary:active {
+  transform: translateY(0);
+}
+
+.turtle-button span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Quick Commands - Colorful & Fun */
+.turtle-quick-commands {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+@media (min-width: 640px) {
+  .turtle-quick-commands {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.turtle-quick-button {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-2);
+  font-weight: 600;
+  color: white;
+  border-radius: var(--radius-2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--code-font-family);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.turtle-quick-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.3s,
+    height 0.3s;
+}
+
+.turtle-quick-button:hover::after {
+  width: 200px;
+  height: 200px;
+}
+
+.turtle-quick-button-green {
+  background: linear-gradient(
+    135deg,
+    hsl(142, 76%, 40%) 0%,
+    hsl(142, 76%, 36%) 100%
+  );
+}
+
+.turtle-quick-button-green:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(142, 76%, 36%) 0%,
+    hsl(142, 76%, 32%) 100%
+  );
+  box-shadow: 0 4px 12px hsl(142, 76%, 36%, 0.4);
+  transform: translateY(-2px);
+}
+
+.turtle-quick-button-green:active {
+  transform: translateY(0);
+}
+
+/* Command Library - Organized & Colorful */
+.turtle-library {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.turtle-category {
+  border: 1px solid var(--gray-5);
+  border-radius: var(--radius-3);
+  padding: var(--space-3);
+  background: hsl(from var(--gray-2) h s l / 0.5);
+  transition: all 0.2s ease;
+}
+
+.turtle-category:hover {
+  border-color: var(--orange-6);
+  background: hsl(from var(--gray-2) h s l / 0.8);
+  box-shadow: 0 2px 8px hsl(from var(--orange-9) h s l / 0.1);
+}
+
+.turtle-category-title {
+  font-weight: 600;
+  font-size: var(--font-size-3);
+  color: var(--gray-12);
+  margin-bottom: var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.turtle-category-commands {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+.turtle-category-button {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-2);
+  font-family: var(--code-font-family);
+  font-weight: 600;
+  color: white;
+  border-radius: var(--radius-2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Orange theme for movement (replacing blue) */
+.turtle-category-button-blue {
+  background: linear-gradient(
+    135deg,
+    var(--orange-9) 0%,
+    var(--orange-10) 100%
+  );
+}
+
+.turtle-category-button-blue:hover {
+  background: linear-gradient(
+    135deg,
+    var(--orange-10) 0%,
+    var(--orange-11) 100%
+  );
+  box-shadow: 0 4px 8px hsl(from var(--orange-9) h s l / 0.3);
+  transform: translateX(4px);
+}
+
+/* Green for drawing */
+.turtle-category-button-green {
+  background: linear-gradient(
+    135deg,
+    hsl(142, 76%, 40%) 0%,
+    hsl(142, 76%, 36%) 100%
+  );
+}
+
+.turtle-category-button-green:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(142, 76%, 36%) 0%,
+    hsl(142, 76%, 32%) 100%
+  );
+  box-shadow: 0 4px 8px hsl(142, 76%, 36%, 0.3);
+  transform: translateX(4px);
+}
+
+/* Teal for utility (replacing purple) */
+.turtle-category-button-purple {
+  background: linear-gradient(
+    135deg,
+    hsl(190, 76%, 45%) 0%,
+    hsl(190, 76%, 40%) 100%
+  );
+}
+
+.turtle-category-button-purple:hover {
+  background: linear-gradient(
+    135deg,
+    hsl(190, 76%, 40%) 0%,
+    hsl(190, 76%, 35%) 100%
+  );
+  box-shadow: 0 4px 8px hsl(190, 76%, 40%, 0.3);
+  transform: translateX(4px);
+}
+
+/* Reference Cards - Playful & Educational */
+.turtle-reference {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--font-size-2);
+}
+
+.turtle-reference-item {
+  padding: var(--space-3);
+  border-radius: var(--radius-3);
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.turtle-reference-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.turtle-reference-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.turtle-reference-item:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}
+
+/* Orange theme for movement */
+.turtle-reference-blue {
+  background: hsl(from var(--orange-3) h s l / 0.4);
+  border-color: var(--orange-6);
+}
+
+.turtle-reference-blue::before {
+  background: var(--orange-9);
+}
+
+.turtle-reference-blue h4 {
+  color: var(--orange-11);
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  margin-bottom: var(--space-2);
+}
+
+.turtle-reference-blue code {
+  color: var(--orange-10);
+  font-family: var(--code-font-family);
+  font-size: var(--font-size-2);
+  font-weight: 600;
+}
+
+/* Green for drawing */
+.turtle-reference-green {
+  background: hsl(142, 80%, 95%);
+  border-color: hsl(142, 76%, 50%);
+}
+
+.turtle-reference-green::before {
+  background: hsl(142, 76%, 36%);
+}
+
+.turtle-reference-green h4 {
+  color: hsl(142, 76%, 25%);
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  margin-bottom: var(--space-2);
+}
+
+.turtle-reference-green code {
+  color: hsl(142, 76%, 30%);
+  font-family: var(--code-font-family);
+  font-size: var(--font-size-2);
+  font-weight: 600;
+}
+
+/* Teal for loops */
+.turtle-reference-purple {
+  background: hsl(190, 80%, 95%);
+  border-color: hsl(190, 76%, 50%);
+}
+
+.turtle-reference-purple::before {
+  background: hsl(190, 76%, 40%);
+}
+
+.turtle-reference-purple h4 {
+  color: hsl(190, 76%, 30%);
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  margin-bottom: var(--space-2);
+}
+
+.turtle-reference-purple code {
+  color: hsl(190, 76%, 35%);
+  font-family: var(--code-font-family);
+  font-size: var(--font-size-2);
+  font-weight: 600;
+}
+
+/* Function Definitions - Code Editor Style */
+.turtle-textarea {
+  width: 100%;
+  padding: var(--space-4);
+  border: 2px solid var(--gray-6);
+  border-radius: var(--radius-3);
+  font-family: var(--code-font-family);
+  color: var(--gray-12);
+  font-size: var(--font-size-2);
+  background: hsl(from var(--gray-2) h s l / 0.5);
+  resize: vertical;
+  min-height: 300px;
+  line-height: 1.6;
+  transition: all 0.2s ease;
+}
+
+.turtle-textarea::placeholder {
+  color: var(--gray-9);
+  opacity: 0.7;
+}
+
+.turtle-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(from var(--orange-9) h s l / 0.2);
+  border-color: var(--orange-8);
+  background: var(--color-background);
+}
+
+/* Features Info Grid - Engaging */
+.turtle-features {
+  margin-top: var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .turtle-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .turtle-features {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.turtle-feature-card {
+  background: linear-gradient(
+    135deg,
+    hsl(from var(--orange-3) h s l / 0.3) 0%,
+    hsl(from var(--orange-2) h s l / 0.5) 100%
+  );
+  border-radius: var(--radius-3);
+  padding: var(--space-4);
+  box-shadow: 0 2px 8px hsl(from var(--gray-12) h s l / 0.08);
+  border: 2px solid var(--orange-4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.turtle-feature-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    hsl(from var(--orange-9) h s l / 0.1) 0%,
+    transparent 70%
+  );
+  transition: all 0.5s ease;
+}
+
+.turtle-feature-card:hover {
+  box-shadow: 0 8px 24px hsl(from var(--orange-9) h s l / 0.2);
+  transform: translateY(-4px);
+  border-color: var(--orange-6);
+}
+
+.turtle-feature-card:hover::before {
+  top: -10%;
+  right: -10%;
+}
+
+.turtle-feature-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.turtle-feature-title {
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  color: var(--orange-11);
+}
+
+.turtle-feature-description {
+  font-size: var(--font-size-2);
+  color: var(--gray-11);
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark Mode Adjustments */
+:is(.dark, .dark-theme) .turtle-reference-blue {
+  background: hsl(from var(--orange-4) h s l / 0.2);
+  border-color: var(--orange-7);
+}
+
+:is(.dark, .dark-theme) .turtle-reference-green {
+  background: hsl(142, 40%, 15%);
+  border-color: hsl(142, 60%, 40%);
+}
+
+:is(.dark, .dark-theme) .turtle-reference-purple {
+  background: hsl(190, 40%, 15%);
+  border-color: hsl(190, 60%, 40%);
+}
+
+/* Scrollbar Styling */
+.turtle-main::-webkit-scrollbar {
+  width: 10px;
+}
+
+.turtle-main::-webkit-scrollbar-track {
+  background: var(--gray-3);
+  border-radius: var(--radius-2);
+}
+
+.turtle-main::-webkit-scrollbar-thumb {
+  background: var(--orange-7);
+  border-radius: var(--radius-2);
+}
+
+.turtle-main::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-8);
+}
+
+/* Staggered Animation */
+.turtle-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.turtle-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.turtle-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.turtle-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.turtle-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .turtle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .turtle-main {
+    padding: var(--space-3);
+  }
+}

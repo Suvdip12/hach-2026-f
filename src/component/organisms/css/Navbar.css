@@ -1,0 +1,861 @@
+/* Existing Nav Button base */
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-5);
+  color: var(--gray-11);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background-color: var(--gray-3);
+  color: var(--gray-12);
+}
+.nav-button.active-style {
+  background-color: var(--orange-9) !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+}
+
+.nav-button.active-style svg {
+  color: white !important;
+}
+
+/* User Dropdown Items */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  color: var(--gray-11);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background-color: var(--gray-3);
+  color: var(--gray-12);
+}
+
+.dropdown-item.logout {
+  color: var(--red-9);
+}
+
+.dropdown-item.logout:hover {
+  background-color: var(--red-3);
+  color: var(--red-11);
+}
+
+/* Navbar wrapper */
+.navbar-wrapper {
+  position: sticky;
+  top: 4px;
+  z-index: 100;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+/* Landing page navbar - no margin, matches content width */
+.navbar-wrapper:not(.internal-mode) .navbar-container {
+  border: 1px solid hsl(from var(--gray-12) h s l / 0.3);
+  background: hsl(from var(--orange-12) h s l / 0.05);
+  border-radius: var(--radius-5);
+  width: 100%;
+  margin: 0;
+  backdrop-filter: blur(10px);
+  position: sticky;
+  min-height: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Default navbar container (for internal pages) */
+.navbar-container {
+  border: 1px solid hsl(from var(--gray-12) h s l / 0.3);
+  background: hsl(from var(--orange-12) h s l / 0.05);
+  border-radius: var(--radius-5);
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  min-height: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Logo section */
+.navbar-logo {
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.brand-text {
+  white-space: nowrap;
+}
+
+/* Navigation buttons */
+.nav-button {
+  box-shadow: inset 0px 0px 0px 1px hsl(from var(--orange-12) h s l / 0.2);
+  border-radius: var(--radius-5);
+  color: hsl(from var(--orange-12) h s l / 0.7);
+  font-weight: 700;
+  white-space: nowrap;
+  min-width: fit-content;
+  padding: 8px 16px;
+}
+
+.nav-button:hover {
+  box-shadow: inset 0px -4px 0 0px hsl(from var(--lime-a8) h s l / 0.7);
+  background-color: var(--lime-3);
+  color: hsl(from var(--lime-12) h s l / 0.7);
+}
+
+.nav-button.active {
+  box-shadow: inset 0px -4px 0 0px hsl(from var(--lime-a8) h s l / 0.7);
+  background-color: var(--lime-3);
+  color: hsl(from var(--lime-12) h s l / 0.7);
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: none;
+  flex: 1;
+  max-width: 600px;
+}
+
+/* Curio Products Dropdown - Landing Page */
+.curio-dropdown-landing {
+  position: relative;
+}
+
+.curio-dropdown-trigger-landing {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  background: transparent;
+  border: 1px solid hsl(from var(--orange-12) h s l / 0.2);
+  border-radius: var(--radius-5);
+  color: hsl(from var(--orange-12) h s l / 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.curio-dropdown-trigger-landing:hover {
+  box-shadow: inset 0px -4px 0 0px hsl(from var(--lime-a8) h s l / 0.7);
+  background-color: var(--lime-3);
+  color: hsl(from var(--lime-12) h s l / 0.7);
+}
+
+.curio-dropdown-trigger-landing svg {
+  transition: transform 0.2s ease;
+}
+
+.curio-dropdown-trigger-landing svg.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.curio-dropdown-menu-landing {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 300px;
+  background: var(--color-background);
+  border: 1px solid var(--gray-6);
+  border-radius: var(--radius-4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 8px;
+  z-index: 1000;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.curio-dropdown-item-landing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.curio-dropdown-item-landing:hover {
+  background: var(--lime-3);
+}
+
+.curio-dropdown-icon-landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--orange-4);
+  border-radius: var(--radius-3);
+  color: var(--orange-11);
+  flex-shrink: 0;
+}
+
+.curio-dropdown-content-landing {
+  flex: 1;
+}
+
+.curio-dropdown-label-landing {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gray-12);
+  margin-bottom: 2px;
+}
+
+.curio-dropdown-description-landing {
+  font-size: 0.8125rem;
+  color: var(--gray-10);
+}
+
+/* Mobile Curio Products Section */
+.mobile-section-landing {
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      var(--orange-9) 0%,
+      var(--orange-10) 50%,
+      var(--orange-9) 100%
+    )
+    1;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.mobile-section-title-landing {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--orange-11);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  padding: 0 8px;
+}
+
+.mobile-curio-link-landing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: var(--radius-3);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.mobile-curio-link-landing:hover {
+  background: var(--lime-3);
+}
+
+.mobile-curio-icon-landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--orange-4);
+  border-radius: var(--radius-3);
+  color: var(--orange-11);
+  flex-shrink: 0;
+}
+
+.mobile-curio-content-landing {
+  flex: 1;
+}
+
+.mobile-curio-label-landing {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--gray-12);
+  margin-bottom: 2px;
+}
+
+.mobile-curio-description-landing {
+  font-size: 0.875rem;
+  color: var(--gray-10);
+}
+
+.desktop-only {
+  display: none;
+}
+
+/* Navbar actions */
+.navbar-actions {
+  flex-shrink: 0;
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: flex;
+  background: transparent;
+  border: 2px solid hsl(from var(--orange-12) h s l / 0.2);
+  color: var(--orange-11);
+  border-radius: var(--radius-3);
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-btn:hover {
+  background: var(--orange-3);
+  border-color: var(--orange-7);
+}
+
+/* Mobile Navigation Menu - Inside Navbar */
+.mobile-nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--color-background);
+  border: 1px solid var(--gray-6);
+  border-top: none;
+  border-radius: 0 0 var(--radius-5) var(--radius-5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  z-index: 50;
+}
+
+.mobile-nav-menu--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-nav-links .nav-button {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.mobile-theme-switcher {
+  border-top: 1px solid var(--gray-6);
+  margin-top: 8px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .brand-text {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .desktop-nav {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-menu-btn {
+    display: none;
+  }
+
+  .mobile-nav-menu {
+    display: none;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
+  .desktop-nav {
+    gap: 24px;
+  }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 767px) {
+  /* Landing page navbar - full width */
+  .navbar-wrapper:not(.internal-mode) .navbar-container {
+    width: 100%;
+    margin: 0;
+    padding: 12px 20px;
+  }
+
+  /* Internal pages navbar */
+  .navbar-wrapper.internal-mode .navbar-container {
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 12px 16px;
+  }
+
+  .brand-text {
+    font-size: 1.1rem;
+  }
+
+  .navbar-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-nav-menu {
+    margin-top: 8px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  /* Landing page navbar - full width */
+  .navbar-wrapper:not(.internal-mode) .navbar-container {
+    width: 100%;
+    margin: 0;
+    padding: 10px 16px;
+  }
+
+  /* Internal pages navbar */
+  .navbar-wrapper.internal-mode .navbar-container {
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+    padding: 10px 12px;
+  }
+
+  .brand-text {
+    font-size: 1rem;
+  }
+
+  .navbar-logo img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ============================================
+   MOBILE MENU STYLES
+   ============================================ */
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--gray-12);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-3);
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: hsl(from var(--gray-12) h s l / 0.08);
+}
+
+.desktop-only-theme {
+  display: block;
+}
+
+.mobile-nav-menu {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  right: 0;
+  background: var(--color-background);
+  border-top: 1px solid var(--gray-6);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  z-index: 99;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-menu--open {
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+}
+
+.mobile-menu-container {
+  padding: 0 1rem;
+}
+
+.mobile-section {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-6);
+}
+
+.mobile-section:last-child {
+  border-bottom: none;
+}
+
+.mobile-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--gray-11);
+  margin-bottom: 0.75rem;
+  padding: 0 0.5rem;
+}
+
+.mobile-tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  border-radius: var(--radius-3);
+  color: var(--gray-12);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.mobile-tab-button:hover {
+  background: var(--gray-3);
+}
+
+.mobile-curio-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--gray-12);
+  border-radius: var(--radius-3);
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.mobile-curio-link:hover {
+  background: var(--gray-3);
+}
+
+.mobile-curio-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--orange-4);
+  border-radius: var(--radius-2);
+  color: var(--orange-11);
+  flex-shrink: 0;
+}
+
+.mobile-curio-content {
+  flex: 1;
+}
+
+.mobile-curio-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gray-12);
+  margin-bottom: 0.25rem;
+}
+
+.mobile-curio-description {
+  font-size: 0.875rem;
+  color: var(--gray-11);
+  line-height: 1.4;
+}
+
+.mobile-theme {
+  padding: 1rem 0;
+}
+
+@media (min-width: 1025px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+
+  .desktop-only-theme {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .desktop-only-theme {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   INTERNAL MODE STYLES (for product pages)
+   ============================================ */
+
+/* When in internal mode, adjust the navbar styling */
+.navbar-wrapper.internal-mode .navbar-container {
+  background: var(--color-background);
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  min-height: 70px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.navbar-logo-link {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.navbar-logo-link:hover {
+  opacity: 0.85;
+}
+
+/* Current Product Info (shown on internal pages) */
+.current-product-info {
+  display: none;
+}
+
+.current-product-divider {
+  width: 3px;
+  height: 32px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--orange-9) 10%,
+    var(--orange-10) 50%,
+    var(--orange-9) 90%,
+    transparent 100%
+  );
+  border-radius: 999px;
+  margin: 0 0.75rem;
+  flex-shrink: 0;
+}
+
+.current-product-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--orange-4);
+  border-radius: var(--radius-2);
+  color: var(--orange-11);
+  flex-shrink: 0;
+}
+
+.current-product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.current-product-name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--gray-12);
+  line-height: 1.2;
+}
+
+.current-product-desc {
+  font-size: 0.75rem;
+  color: var(--gray-10);
+  line-height: 1.2;
+}
+
+/* Inline Navbar Tabs (shown on pages with tabs like CurioCode) */
+.navbar-tabs {
+  display: none;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: transparent;
+  box-shadow: inset 0px 0px 0px 1px hsl(from var(--orange-12) h s l / 0.2);
+  border-radius: var(--radius-5);
+  color: hsl(from var(--orange-12) h s l / 0.7);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tab-button:hover {
+  box-shadow: inset 0px -4px 0 0px hsl(from var(--lime-a8) h s l / 0.7);
+  background-color: var(--lime-3);
+  color: hsl(from var(--lime-12) h s l / 0.7);
+}
+
+.tab-button.active {
+  box-shadow: inset 0px -4px 0 0px hsl(from var(--lime-a8) h s l / 0.7);
+  background-color: var(--lime-3);
+  color: hsl(from var(--lime-12) h s l / 0.7);
+  font-weight: 700;
+}
+
+.tab-button svg {
+  flex-shrink: 0;
+}
+
+.tab-label {
+  display: inline;
+}
+
+/* Responsive behavior for internal mode features */
+@media (min-width: 1025px) {
+  .current-product-info {
+    display: flex !important;
+  }
+
+  .navbar-tabs {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar-tabs {
+    display: flex !important;
+  }
+
+  .tab-label {
+    display: none;
+  }
+
+  .tab-button {
+    padding: 0.375rem 0.625rem;
+  }
+
+  .current-product-info {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-wrapper.internal-mode {
+    top: 0;
+    padding: 0.75rem 0.5rem 0 0.5rem;
+  }
+
+  .navbar-wrapper.internal-mode .navbar-container {
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    min-height: 60px;
+  }
+
+  .current-product-info {
+    display: none !important;
+  }
+
+  .navbar-tabs {
+    display: none !important;
+  }
+}
+
+/* Login Navigation Button */
+.login-nav-button-link {
+  text-decoration: none;
+}
+
+.login-nav-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 20px;
+  background: var(--orange-9) !important;
+  color: white !important;
+  border-radius: var(--radius-5);
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.login-nav-button:hover {
+  background: var(--orange-10) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+}
+
+.login-nav-button:active {
+  transform: translateY(0);
+}
+
+/* Mobile Login Button */
+.mobile-login {
+  padding-top: 8px;
+}
+
+.mobile-login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--orange-9);
+  color: white;
+  border-radius: var(--radius-4);
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mobile-login-button:hover {
+  background: var(--orange-10);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
+}
+
+.mobile-login-button:active {
+  transform: translateY(0);
+}

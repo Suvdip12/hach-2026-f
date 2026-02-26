@@ -1,0 +1,243 @@
+.workspace-container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.blockly-workspace {
+  position: relative;
+  height: 100%;
+  flex-shrink: 0;
+  background: var(--gray-2);
+  display: flex;
+  flex-direction: column;
+}
+
+.blockly-workspace-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  flex-shrink: 0;
+  z-index: 40;
+  border-bottom: 1px solid var(--gray-6);
+  background: var(--color-surface);
+}
+
+.blockly-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blockly-topbar-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.blockly-topbar-button.primary {
+  background-color: var(--lime-9) !important;
+  color: white !important;
+}
+
+.blockly-topbar-button.primary:hover:not(:disabled) {
+  background-color: var(--lime-10) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.blockly-topbar-button.secondary {
+  background-color: var(--orange-9) !important;
+  color: white !important;
+}
+
+.blockly-topbar-button.secondary:hover:not(:disabled) {
+  background-color: var(--orange-10) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.blockly-topbar-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.blockly-topbar-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.blockly-workspace-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+
+.blockly-workspace-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--gray-2);
+}
+
+.blockly-code-panel-toggle {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--orange-9);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 50;
+}
+
+.blockly-code-panel-toggle:hover {
+  background: var(--orange-10);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.blockly-code-panel-toggle:active {
+  transform: scale(0.95);
+}
+
+:is(.dark, .dark-theme) .blockly-workspace,
+:is(.dark, .dark-theme) .blockly-workspace-inner {
+  background: var(--gray-3);
+}
+
+:is(.dark, .dark-theme) .blockly-workspace-topbar {
+  background: var(--gray-4);
+  border-bottom-color: var(--gray-7);
+}
+
+.blockly-workspace-inner .blocklySvg {
+  background-color: var(--gray-2) !important;
+}
+
+:is(.dark, .dark-theme) .blockly-workspace-inner .blocklySvg {
+  background-color: var(--gray-3) !important;
+}
+
+:is(.dark, .dark-theme) .blocklyFlyout {
+  fill: var(--gray-4) !important;
+}
+
+:is(.dark, .dark-theme) .blocklyScrollbarHandle {
+  fill: var(--gray-8) !important;
+}
+
+:is(.dark, .dark-theme) .blocklyScrollbarBackground {
+  fill: var(--gray-5) !important;
+}
+
+.blocklyWorkspace .blocklyTrash {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  bottom: auto !important;
+  left: auto !important;
+}
+
+.blocklyWorkspace .blocklyZoom {
+  position: absolute !important;
+  top: 80px !important;
+  right: 16px !important;
+  bottom: auto !important;
+  left: auto !important;
+}
+
+.blocklyZoom .blocklyZoomButton {
+  display: block !important;
+  margin-bottom: 8px !important;
+}
+
+.blockly-placeholder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.blockly-placeholder-content {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-panel);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-4);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
+  border: 1px solid var(--gray-6);
+}
+
+:is(.dark, .dark-theme) .blockly-placeholder-content {
+  background-color: var(--gray-4);
+  border-color: var(--gray-7);
+}
+
+.blockly-placeholder-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1rem auto;
+  background: linear-gradient(to bottom right, #3b82f6, #9333ea);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockly-placeholder-icon svg {
+  width: 2rem;
+  height: 2rem;
+  color: #ffffff;
+}
+
+.blockly-placeholder-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-12);
+  margin-bottom: 0.5rem;
+}
+
+.blockly-placeholder-description {
+  color: var(--gray-10);
+  max-width: 24rem;
+}
+
+@media (max-width: 768px) {
+  .blockly-topbar-button,
+  .blockly-code-panel-toggle {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .blockly-code-panel-toggle {
+    bottom: 12px;
+    right: 12px;
+  }
+}

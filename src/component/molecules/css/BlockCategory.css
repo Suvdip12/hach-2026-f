@@ -1,0 +1,211 @@
+/* Block category styles */
+
+.sidebar-category {
+  margin-bottom: var(--space-3);
+}
+
+.category-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3);
+  border-radius: var(--radius-2);
+  border-left-width: 4px;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-1);
+  background: var(--color-surface);
+  border: 1px solid var(--gray-6);
+  border-left-color: currentColor;
+  cursor: pointer;
+  color: var(--gray-12);
+}
+
+.category-button:hover {
+  background: var(--gray-3);
+  box-shadow: var(--shadow-2);
+}
+
+.category-button-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.category-name {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-2);
+  letter-spacing: 0.025em;
+}
+
+.category-count {
+  font-size: var(--font-size-1);
+  padding: var(--space-1) var(--space-2);
+  background: var(--orange-3);
+  color: var(--orange-11);
+  border-radius: var(--radius-4);
+  font-weight: var(--font-weight-medium);
+}
+
+.category-icons {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.chevron-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+  color: var(--gray-9);
+}
+
+.blocks-grid {
+  margin-top: var(--space-3);
+  padding: 4px;
+  display: grid;
+  gap: 8px;
+  grid-auto-rows: minmax(36px, auto);
+}
+
+/* Category specific colors - Light mode */
+.category-logic .category-button {
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-left-color: #3b82f6;
+}
+
+.category-loops .category-button {
+  background: #dcfce7;
+  color: #15803d;
+  border-left-color: #22c55e;
+}
+
+.category-math .category-button {
+  background: #f3e8ff;
+  color: #7c3aed;
+  border-left-color: #8b5cf6;
+}
+
+.category-text .category-button {
+  background: #fef3c7;
+  color: #a16207;
+  border-left-color: #eab308;
+}
+
+.category-lists .category-button {
+  background: #fee2e2;
+  color: #b91c1c;
+  border-left-color: #ef4444;
+}
+
+/* Dark mode support */
+.dark .category-button {
+  background: var(--gray-3);
+  border-color: var(--gray-7);
+  color: var(--gray-11);
+}
+
+.dark .category-button:hover {
+  background: var(--gray-4);
+}
+
+.dark .category-count {
+  background: var(--orange-4);
+  color: var(--orange-11);
+}
+
+.dark .chevron-icon {
+  color: var(--gray-10);
+}
+
+.dark .category-name {
+  color: var(--gray-12);
+}
+
+/* Category specific colors - Dark mode */
+.dark .category-logic .category-button {
+  background: rgba(59, 130, 246, 0.15);
+  border-left-color: #3b82f6;
+}
+
+.dark .category-logic .category-name {
+  color: #93c5fd;
+}
+
+/* Hover styles for blocks inside categories */
+.category-logic .block-button:hover {
+  background: rgba(59, 130, 246, 0.1);
+  border-color: #3b82f6;
+}
+
+.category-loops .block-button:hover {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: #22c55e;
+}
+
+.category-math .block-button:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: #8b5cf6;
+}
+
+.category-text .block-button:hover {
+  background: rgba(234, 179, 8, 0.1);
+  border-color: #eab308;
+}
+
+.category-lists .block-button:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+}
+
+.dark .category-loops .category-button {
+  background: rgba(34, 197, 94, 0.15);
+  border-left-color: #22c55e;
+}
+
+.dark .category-loops .category-name {
+  color: #86efac;
+}
+
+.dark .category-math .category-button {
+  background: rgba(139, 92, 246, 0.15);
+  border-left-color: #8b5cf6;
+}
+
+.dark .category-math .category-name {
+  color: #c4b5fd;
+}
+
+.dark .category-text .category-button {
+  background: rgba(234, 179, 8, 0.15);
+  border-left-color: #eab308;
+}
+
+.dark .category-text .category-name {
+  color: #fcd34d;
+}
+
+.dark .category-lists .category-button {
+  background: rgba(239, 68, 68, 0.15);
+  border-left-color: #ef4444;
+}
+
+.dark .category-lists .category-name {
+  color: #fca5a5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .category-button {
+    padding: var(--space-2);
+  }
+
+  .category-name {
+    font-size: var(--font-size-1);
+  }
+
+  .blocks-grid {
+    gap: var(--space-1);
+  }
+}

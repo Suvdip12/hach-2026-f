@@ -1,0 +1,123 @@
+/* CodePanel organism styles */
+
+.code-panel {
+  width: 400px;
+  flex: none;
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--gray-6);
+}
+
+:is(.dark, .dark-theme) .code-panel {
+  background-color: var(--gray-3);
+  border-color: var(--gray-7);
+}
+
+.code-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--gray-6);
+  flex-shrink: 0;
+  background: var(--color-surface);
+  height: 48px;
+}
+
+:is(.dark, .dark-theme) .code-panel-header {
+  background: var(--color-surface); /* Keep consistent with light mode variable usage, which handles theme */
+  border-bottom-color: var(--gray-7);
+}
+
+.code-panel-title {
+  font-size: 0.875rem;
+  color: var(--gray-11);
+  font-weight: 600;
+}
+.close-button {
+  background: none;
+  border: 1px solid var(--gray-6);
+  cursor: pointer;
+  color: var(--gray-11);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: var(--gray-4);
+  color: var(--gray-12);
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray-11);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.code-panel-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* Code Panel Resize Handle (Internal) */
+.resize-handle.resize-handle-horizontal {
+    height: 10px; /* Larger hit area */
+    cursor: row-resize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gray-3);
+    border-top: 1px solid var(--gray-6);
+    border-bottom: 1px solid var(--gray-6);
+    margin: 0;
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+.resize-handle.resize-handle-horizontal:hover,
+.resize-handle.resize-handle-horizontal.dragging {
+    background: var(--orange-4);
+}
+
+.resize-handle.resize-handle-horizontal .resize-handle-icon {
+    transform: rotate(90deg); /* Make grip vertical for horizontal bar? or just use GripHorizontal */
+    width: 16px;
+    height: 16px;
+    color: var(--gray-11);
+}
+
+/* Ensure halves handle scrolling internally */
+.code-half {
+  overflow: hidden; /* Let Monaco/CodeDisplay handle scroll */
+  display: flex;
+  flex-direction: column;
+}
+
+.output-half {
+  overflow: hidden; /* Let OutputDisplay handle scroll */
+  display: flex;
+  flex-direction: column;
+  background: var(--gray-2);
+}
+
+/* Override previous styles */
+.panel-divider {
+  display: none;
+}

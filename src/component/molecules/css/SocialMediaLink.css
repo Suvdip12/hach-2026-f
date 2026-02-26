@@ -1,0 +1,32 @@
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: var(--gray-4);
+  color: var(--gray-11);
+  transition: all 0.2s ease;
+  border: 1px solid var(--gray-6);
+}
+
+.social-link:hover .social-icon {
+  background-color: var(--orange-4);
+  color: var(--orange-11);
+  border-color: var(--orange-7);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+}

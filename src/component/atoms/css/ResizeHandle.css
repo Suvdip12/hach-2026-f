@@ -1,0 +1,60 @@
+/* Resize handle styles */
+
+.resize-handle {
+  flex-shrink: 0;
+  position: relative;
+  transition: background-color 200ms;
+}
+
+.resize-handle-vertical {
+  width: 0.375rem; /* w-1.5 */
+  background-color: #d1d5db; /* bg-gray-300 */
+  cursor: col-resize;
+}
+
+.resize-handle-horizontal {
+  height: 0.375rem; /* h-1.5 */
+  background-color: #d1d5db; /* bg-gray-300 */
+  cursor: row-resize;
+}
+
+.resize-handle:hover {
+  background-color: #60a5fa; /* bg-blue-400 */
+}
+
+.resize-handle.dragging {
+  background-color: #3b82f6; /* bg-blue-500 */
+}
+
+.resize-handle-grip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.resize-handle:hover .resize-handle-grip {
+  opacity: 1;
+}
+
+.resize-handle-vertical .resize-handle-grip {
+  top: 0;
+  bottom: 0;
+  left: -0.25rem;
+  right: -0.25rem;
+}
+
+.resize-handle-horizontal .resize-handle-grip {
+  left: 0;
+  right: 0;
+  top: -0.25rem;
+  bottom: -0.25rem;
+}
+
+.resize-handle-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: #6b7280;
+}
